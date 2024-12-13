@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist node_modules package-lock.json"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,5 +25,8 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5.2.2",
     "vite": "^5.1.0"
+  },
+  "overrides": {
+    "rollup": "^4.9.6"
   }
 }
