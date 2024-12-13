@@ -16,10 +16,14 @@ export default defineConfig({
       input: {
         main: path.resolve(__dirname, 'index.html'),
       },
+      output: {
+        manualChunks: {
+          'vendor': ['react', 'react-dom', 'react-router-dom'],
+        },
+      },
     },
   },
-  server: {
-    port: 5173,
-    host: true
-  }
+  optimizeDeps: {
+    include: ['react', 'react-dom', 'react-router-dom'],
+  },
 });
